@@ -1,0 +1,11 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+a {
+    color: #1e90ff;
+}
+a:visited {
+    color: #551a8b;
+}
