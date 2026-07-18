@@ -11,7 +11,7 @@
             "name": "Fireworks Factory",
             "type": "Plane - Evening Lake",
             "oracle": "When you planeswalk to Fireworks Factory and at the beginning of your upkeep, create a colorless artifact token named Munitions with “When this token leaves the battlefield, it deals 2 damage to any target.”.",
-            "chaos": "Each player loses 2 life.",
+            "chaos": "Whenever chaos ensues, each player loses 2 life.",
             "src": "./imgs/planes/Fireworks Factory.jpg"
         },
         {
