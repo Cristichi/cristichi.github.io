@@ -1,11 +1,36 @@
-body {
-    background-color: #0b0072;
-    color: #79ff3b;
+header {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
 }
 
-a {
-    color: #1e90ff;
+/* Style the topnav */
+header>ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333333;
 }
-a:visited {
-    color: #551a8b;
+
+header > ul.hidden {
+    display: none;
+}
+
+/* Style links in topnav */
+header>ul li a {
+    display: block;
+    color: #f1f1f1;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+header>ul li a:hover {
+    background-color: #dddddd;
+    color: black;
+}
+
+div#planewalk {
+    width: 90%;
+    height: max-content;
 }

@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Artisans, Spyro's Home",
+        "type": "Avalar",
+        "oracle": "At the beginning of combat on your turn, create your choice of a Treasure token or a 1/1 red and blue Dragon creature token.",
+        "chaos": "Whenever chaos ensues, create a Treasure token and a 1/1 red and blue Dragon creature token.",
+        "src": "https://cdna.artstation.com/p/assets/images/images/014/024/084/large/simon-kopp-spyro-artisansa.jpg?1542129542"
+    },
+    {
+        "name": "Mapa chungo",
+        "type": "Avalar",
+        "oracle": "Al principio del turno TE MUERES LOCO.",
+        "chaos": "You lose the game.",
+        "src": "https://static.wikia.nocookie.net/spyro/images/d/d4/Dragonrealmslos.jpg/revision/latest?cb=20110427200611"
+    }
+]
