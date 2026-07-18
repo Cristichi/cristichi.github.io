@@ -53,7 +53,7 @@ function loadNextPlane() {
 
         var plane = planes.pop();
 
-        document.getElementById("planewalk").classList.add('hidden');
+        document.getElementById("planeswalkDiv").classList.add('hidden');
         document.getElementById("loading").classList.remove('hidden');
 
         document.getElementById("planeName").innerHTML = plane.name;
@@ -63,7 +63,7 @@ function loadNextPlane() {
         document.getElementById("planeBg").src = plane.src;
 
         document.getElementById("loading").classList.add('hidden');
-        document.getElementById("planewalk").classList.remove('hidden');
+        document.getElementById("planeswalkDiv").classList.remove('hidden');
     }
 }
 
