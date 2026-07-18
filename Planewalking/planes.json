@@ -8,11 +8,11 @@
             "src": "https://cdna.artstation.com/p/assets/images/images/014/024/084/large/simon-kopp-spyro-artisansa.jpg?1542129542"
         },
         {
-            "name": "Mapa chungo",
-            "type": "Plane - Avalar",
-            "oracle": "Al principio del turno TE MUERES LOCO.",
-            "chaos": "You lose the game.",
-            "src": "https://static.wikia.nocookie.net/spyro/images/d/d4/Dragonrealmslos.jpg/revision/latest?cb=20110427200611"
+            "name": "Fireworks Factory",
+            "type": "Plane - Evening Lake",
+            "oracle": "When you planeswalk to Fireworks Factory and at the beginning of your upkeep, create a colorless artifact token named Munitions with “When this token leaves the battlefield, it deals 2 damage to any target.”.",
+            "chaos": "Each player loses 2 life.",
+            "src": "./imgs/planes/Fireworks Factory.jpg"
         },
         {
             "name": "Norn's Dominion",
@@ -27,7 +27,7 @@
             "name": "All planes",
             "planes": [
                 "Artisans, Spyro's Home",
-                "Mapa chungo",
+                "Fireworks Factory",
                 "Norn's Dominion"
             ]
         },
@@ -35,7 +35,7 @@
             "name": "Spyro Realms",
             "planes": [
                 "Artisans, Spyro's Home",
-                "Mapa chungo"
+                "Fireworks Factory"
             ]
         }
     ]
