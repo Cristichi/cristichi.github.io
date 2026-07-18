@@ -15,18 +15,35 @@
             <li><a href="..">Go back</a></li>
         </ul>
     </header>
+    <h1>Planewalking</h1>
 
-    <div id="start">
-        <h1>Planewalking</h1>
+    <div id="loading">
+        <p>Loading plane data...</p>
+        <p>Please be patient or rebel to your Internet company.</p>
+    </div>
+
+    <div id="error" class="hidden">
+        <p>Oh no, error happened:</p>
+        <p id="pError"></p>
+    </div>
+
+    <div id="start" class="hidden">
         <div>
-            <button>Start</button>
+            <button onclick="start()">Start</button>
         </div>
     </div>
 
     <div id="planewalk" class="hidden">
-        <img src="" />
+        <div class="plane">
+            <img id="planeBg" src="" />
+            <p id="planeName"></p>
+            <p id="planeType"></p>
+            <p id="planeOracle"></p>
+            <p id="planeChaos"></p>
+        </div>
+        <button onclick="loadNextPlane()">Planeswalk</button>
     </div>
-
+    
     <script type="text/javascript" src="util.js"></script>
 
     <!-- Menu thing -->
@@ -34,7 +51,6 @@
         var menuList = document.getElementById("menuList");
         function menuBtn() {
             menuList.classList.toggle('hidden');
-            console.log("joer")
         } 
     </script>
 
