@@ -62,6 +62,6 @@ div#planeview, div#shuffle {
 div.plane > img {
   border-radius: 8px;
   max-width: 90%;
-  max-height: 50cap;
+  max-height: 50vh;
   height: auto;
 }
