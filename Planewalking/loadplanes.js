@@ -1,3 +1,4 @@
+var allPlanes = null;
 var planes = null;
 window.onload = function () {
     fetch('./planes.json')
@@ -12,6 +13,7 @@ window.onload = function () {
         })
         .then(data => {
             console.log(data);
+            allPlanes = data;
             shuffle(data)
             planes = data;
             document.getElementById("loading").classList.add('hidden');
@@ -49,8 +51,11 @@ function start() {
         document.getElementById("loading").classList.add('hidden');
         document.getElementById("error").classList.remove('hidden');
     } else {
+        if (planes.length == 0) {
+            planes = allPlanes;
+            shuffle(planes)
+        }
         document.getElementById("menuList").classList.add('hidden');
-
         loadNextPlane();
     }
 }
