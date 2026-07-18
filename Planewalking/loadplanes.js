@@ -55,7 +55,7 @@ function start() {
             planes = allPlanes;
             shuffle(planes)
         }
-        document.getElementById("menuList").classList.add('hidden');
+        document.getElementById("header").classList.add('hidden');
         loadNextPlane();
     }
 }
