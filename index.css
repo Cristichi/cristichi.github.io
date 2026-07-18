@@ -5,7 +5,8 @@ body {
 
 a {
     color: #1e90ff;
+    font: 1.2em/2 "Fira Sans", sans-serif;
 }
 a:visited {
-    color: #551a8b;
+    color: #b07ae2;
 }

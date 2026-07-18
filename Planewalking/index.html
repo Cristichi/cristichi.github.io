@@ -6,13 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
 </head>
 
 <body>
-    <header>
-        <button onclick="menuBtn()">Hamburguesa</button>
+    <header id="header">
+        <button onclick="menuBtn()">&#127828;</button>
         <ul id="menuList" class="hidden">
-            <li><a href="..">Go back</a></li>
+            <li><a href="..">Check all Websites</a></li>
         </ul>
     </header>
     <h1>Planewalking</h1>
@@ -28,20 +32,26 @@
     </div>
 
     <div id="start" class="hidden">
-        <div>
-            <button onclick="start()">Start</button>
-        </div>
+        <p>Choose a Deck</p>
+        <ul id="deckChoose">
+
+        </ul>
     </div>
 
     <div id="planewalk" class="hidden">
-        <div class="plane">
+        <button id="planeswalkBtn" onclick="loadNextPlane()">Planeswalk</button>
+        <div id="planeview" class="plane">
             <img id="planeBg" src="" />
-            <p id="planeName"></p>
+            <h2 id="planeName"></h2>
             <p id="planeType"></p>
             <p id="planeOracle"></p>
             <p id="planeChaos"></p>
         </div>
-        <button onclick="loadNextPlane()">Planeswalk</button>
+        <div id="shuffle">
+            <p>Click again to shuffle.</p>
+            <p>This is here in case after shuffling you get the same last plane, so you don't think you didn't click.</p>
+        </div>
+        <p>INFO: Reload the page to change planechase deck.</p>
     </div>
     
     <script type="text/javascript" src="util.js"></script>

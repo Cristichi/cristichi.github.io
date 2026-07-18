@@ -1,16 +1,42 @@
-[
-    {
-        "name": "Artisans, Spyro's Home",
-        "type": "Avalar",
-        "oracle": "At the beginning of combat on your turn, create your choice of a Treasure token or a 1/1 red and blue Dragon creature token.",
-        "chaos": "Whenever chaos ensues, create a Treasure token and a 1/1 red and blue Dragon creature token.",
-        "src": "https://cdna.artstation.com/p/assets/images/images/014/024/084/large/simon-kopp-spyro-artisansa.jpg?1542129542"
-    },
-    {
-        "name": "Mapa chungo",
-        "type": "Avalar",
-        "oracle": "Al principio del turno TE MUERES LOCO.",
-        "chaos": "You lose the game.",
-        "src": "https://static.wikia.nocookie.net/spyro/images/d/d4/Dragonrealmslos.jpg/revision/latest?cb=20110427200611"
-    }
-]
+{
+    "planes": [
+        {
+            "name": "Artisans, Spyro's Home",
+            "type": "Plane - Avalar",
+            "oracle": "At the beginning of combat on your turn, create your choice of a Treasure token or a 1/1 red and blue Dragon creature token.",
+            "chaos": "Whenever chaos ensues, create a Treasure token and a 1/1 red and blue Dragon creature token.",
+            "src": "https://cdna.artstation.com/p/assets/images/images/014/024/084/large/simon-kopp-spyro-artisansa.jpg?1542129542"
+        },
+        {
+            "name": "Fireworks Factory",
+            "type": "Plane - Evening Lake",
+            "oracle": "When you planeswalk to Fireworks Factory and at the beginning of your upkeep, create a colorless artifact token named Munitions with “When this token leaves the battlefield, it deals 2 damage to any target.”.",
+            "chaos": "Whenever chaos ensues, each player loses 2 life.",
+            "src": "./imgs/planes/Fireworks Factory.jpg"
+        },
+        {
+            "name": "Norn's Dominion",
+            "type": "Plane — New Phyrexia",
+            "oracle": "When you planeswalk away from Norn's Dominion, destroy each nonland permanent without a fate counter on it, then remove all fate counters from all permanents.",
+            "chaos": "Whenever chaos ensues, you may put a fate counter on target permanent.",
+            "src": "https://cards.scryfall.io/art_crop/front/2/0/20d23638-74fb-481d-a3c4-d7f5fd666211.jpg?1783936877"
+        }
+    ],
+    "decks": [
+        {
+            "name": "All planes",
+            "planes": [
+                "Artisans, Spyro's Home",
+                "Fireworks Factory",
+                "Norn's Dominion"
+            ]
+        },
+        {
+            "name": "Spyro Realms",
+            "planes": [
+                "Artisans, Spyro's Home",
+                "Fireworks Factory"
+            ]
+        }
+    ]
+}
