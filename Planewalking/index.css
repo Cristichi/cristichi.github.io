@@ -30,6 +30,21 @@ header>ul li a:hover {
     color: black;
 }
 
+ul#deckChoose {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul#deckChoose > li {
+    text-align: center;
+    background-color: #333333;
+    color: #dddddd;
+    padding: 10px;
+    font-size: large;
+}
+
 div#planewalk {
     width: 90%;
     height: max-content;

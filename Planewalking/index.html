@@ -32,13 +32,14 @@
     </div>
 
     <div id="start" class="hidden">
-        <div>
-            <button onclick="start()">Start</button>
-        </div>
+        <p>Choose a Deck</p>
+        <ul id="deckChoose">
+
+        </ul>
     </div>
 
     <div id="planewalk" class="hidden">
-        <button onclick="loadNextPlane()">Planeswalk</button>
+        <button id="planeswalkBtn" onclick="loadNextPlane()">Planeswalk</button>
         <div id="planeview" class="plane">
             <img id="planeBg" src="" />
             <h2 id="planeName"></h2>
@@ -50,6 +51,7 @@
             <p>Click again to shuffle.</p>
             <p>This is here in case after shuffling you get the same last plane, so you don't think you didn't click.</p>
         </div>
+        <p>INFO: Reload the page to change planechanse deck.</p>
     </div>
     
     <script type="text/javascript" src="util.js"></script>

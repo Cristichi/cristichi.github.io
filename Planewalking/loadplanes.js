@@ -1,4 +1,6 @@
+var decks = null;
 var allPlanes = null;
+var deckPlanes = null;
 var planes = null;
 window.onload = function () {
     fetch('./planes.json')
@@ -13,9 +15,27 @@ window.onload = function () {
         })
         .then(data => {
             console.log(data);
-            allPlanes = JSON.parse(JSON.stringify(data));
-            shuffle(data)
-            planes = JSON.parse(JSON.stringify(data));
+
+            allPlanes = JSON.parse(JSON.stringify(data.planes));
+            console.log("allPlanes");
+            console.log(allPlanes);
+
+            decks = JSON.parse(JSON.stringify(data.decks));
+            console.log("decks");
+            console.log(decks);
+            var ul = document.getElementById("deckChoose");
+            for(let d of decks) {
+                console.log(d)
+                var li = document.createElement("li");
+                var btn = document.createElement("button");
+                btn.addEventListener('click', () => {
+                    start(d.name);
+                });
+                btn.innerHTML = d.name;
+                li.appendChild(btn);
+                ul.appendChild(li);
+            }
+
             document.getElementById("loading").classList.add('hidden');
             document.getElementById("start").classList.remove('hidden');
         })
@@ -31,7 +51,7 @@ function loadNextPlane() {
     if (planes.length == 0) {
         document.getElementById("planeview").classList.add('hidden');
         document.getElementById("shuffle").classList.remove('hidden');
-        planes = JSON.parse(JSON.stringify(allPlanes));
+        planes = JSON.parse(JSON.stringify(deckPlanes));
         shuffle(planes)
         console.log("shuffled planes");
         console.log(planes)
@@ -57,7 +77,29 @@ function loadNextPlane() {
     }
 }
 
-function start() {
+function start(deckName) {
+    console.log(`Doing start(${deckName})`);
+    console.log(decks);
+    targetNames = null;
+    for (d of decks){
+        if (d.name == deckName){
+            targetNames = d.planes;
+            break;
+        }
+    }
+    console.log(targetNames);
+    planes = [];
+    for (p of allPlanes){
+        for (targetName of targetNames){
+            if (targetName == p.name){
+                planes.push(p)
+            }
+        }
+    }
+    console.log(planes);
+    deckPlanes = JSON.parse(JSON.stringify(planes));
+
+    document.getElementById("planeswalkBtn").innerHTML = `Planeswalk in "${deckName}"`;
     document.getElementById("start").classList.add('hidden');
     if (planes == null) {
         document.getElementById("pError").innerHTML = "Planes did not load! Reload page to try again.";
