@@ -46,8 +46,10 @@ ul#deckChoose > li {
 }
 
 div#planewalk {
-    width: 90%;
+    text-align: start;
+    max-width: 90%;
     height: max-content;
+    margin: 5%, 10px, 5%, 10px;
 }
 
 div#planeview, div#shuffle {
@@ -59,6 +61,7 @@ div#planeview, div#shuffle {
 
 div.plane > img {
   border-radius: 8px;
-  max-width: 100%;
+  max-width: 90%;
+  max-height: 50cap;
   height: auto;
 }
