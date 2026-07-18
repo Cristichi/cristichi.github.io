@@ -2,6 +2,7 @@ var decks = null;
 var allPlanes = null;
 var deckPlanes = null;
 var planes = null;
+
 window.onload = function () {
     fetch('./planes.json')
         .then(response => {
@@ -14,18 +15,11 @@ window.onload = function () {
             return response.json();
         })
         .then(data => {
-            console.log(data);
-
             allPlanes = JSON.parse(JSON.stringify(data.planes));
-            console.log("allPlanes");
-            console.log(allPlanes);
-
             decks = JSON.parse(JSON.stringify(data.decks));
-            console.log("decks");
-            console.log(decks);
             var ul = document.getElementById("deckChoose");
-            for(let d of decks) {
-                console.log(d)
+
+            for (let d of decks) {
                 var li = document.createElement("li");
                 var btn = document.createElement("button");
                 btn.addEventListener('click', () => {
@@ -53,16 +47,12 @@ function loadNextPlane() {
         document.getElementById("shuffle").classList.remove('hidden');
         planes = JSON.parse(JSON.stringify(deckPlanes));
         shuffle(planes)
-        console.log("shuffled planes");
-        console.log(planes)
     } else {
         document.getElementById("planeview").classList.remove('hidden');
         document.getElementById("shuffle").classList.add('hidden');
 
-        document.getElementById("planewalk").classList.add('hidden');
         var plane = planes.pop();
-        console.log(plane);
-        
+
         document.getElementById("planewalk").classList.add('hidden');
         document.getElementById("loading").classList.remove('hidden');
 
@@ -71,32 +61,30 @@ function loadNextPlane() {
         document.getElementById("planeOracle").innerHTML = plane.oracle;
         document.getElementById("planeChaos").innerHTML = plane.chaos;
         document.getElementById("planeBg").src = plane.src;
-        
+
         document.getElementById("loading").classList.add('hidden');
         document.getElementById("planewalk").classList.remove('hidden');
     }
 }
 
 function start(deckName) {
-    console.log(`Doing start(${deckName})`);
-    console.log(decks);
     targetNames = null;
-    for (d of decks){
-        if (d.name == deckName){
+    for (d of decks) {
+        if (d.name == deckName) {
             targetNames = d.planes;
             break;
         }
     }
-    console.log(targetNames);
+    
     planes = [];
-    for (p of allPlanes){
-        for (targetName of targetNames){
-            if (targetName == p.name){
+    for (p of allPlanes) {
+        for (targetName of targetNames) {
+            if (targetName == p.name) {
                 planes.push(p)
             }
         }
     }
-    console.log(planes);
+    
     deckPlanes = JSON.parse(JSON.stringify(planes));
 
     document.getElementById("planeswalkBtn").innerHTML = `Planeswalk in "${deckName}"`;
