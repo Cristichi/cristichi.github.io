@@ -1,14 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <title>Planewalking</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
+
 <body>
-    <ul>
-        <li><a href="../">Go back</a></li>
-    </ul>
-    <h1>Planewalking</h1>
-    <p>We do things in here, but WIP</p>
+    <header>
+        <button onclick="menuBtn()">Hamburguesa</button>
+        <ul id="menuList" class="hidden">
+            <li><a href="..">Go back</a></li>
+        </ul>
+    </header>
+
+    <div id="start">
+        <h1>Planewalking</h1>
+        <div>
+            <button>Start</button>
+        </div>
+    </div>
+
+    <div id="planewalk" class="hidden">
+        <img src="" />
+    </div>
+
+    <script type="text/javascript" src="util.js"></script>
+
+    <!-- Menu thing -->
+    <script>
+        var menuList = document.getElementById("menuList");
+        function menuBtn() {
+            menuList.classList.toggle('hidden');
+            console.log("joer")
+        } 
+    </script>
+
+    <!-- Load plane -->
+    <script type="text/javascript" src="loadplanes.js"></script>
+
 </body>
+
 </html>
