@@ -54,6 +54,8 @@ function start() {
         if (planes.length == 0) {
             planes = allPlanes;
             shuffle(planes)
+            console.log("shuffled planes");
+            console.log(planes)
         }
         document.getElementById("header").classList.add('hidden');
         loadNextPlane();
