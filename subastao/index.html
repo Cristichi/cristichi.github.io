@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contador Subastao</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body onload="cargado()">
+    <div class="root">
+        <table class="estructura">
+            <tr><td colspan="2"><h1>Contador de Subastao</h1></td></tr>
+
+            <tr>
+                <th><input class="equipo" type="text" autocomplete="off" placeholder="Nosotros"></th>
+                <th><input class="equipo" type="text" autocomplete="off" placeholder="Ellos"></th>
+            </tr>
+            <tr>
+                <td>
+                    <form action="javascript:void(0);">
+                        <input type="number" class="cantidad" id="inE1"><br>
+                        <input type="button" class="sumar" onclick="masE1(-5)" value="-5">
+                        <input type="button" class="sumar" onclick="masE1(+5)" value="+5">
+                        <input type="submit" onclick="ganarE1()" value="Sumar!">
+                    </form>
+                </td>
+                <td>
+                    <form action="javascript:void(0);">
+                        <input type="number" class="cantidad" id="inE2"><br>
+                        <input type="button" class="sumar" onclick="masE2(-5)" value="-5">
+                        <input type="button" class="sumar" onclick="masE2(+5)" value="+5">
+                        <input type="submit" onclick="ganarE2()" value="Sumar!">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table id="tbE1" class="puntos">
+                        <!-- tr>
+                            <th>Ganancias</th>
+                            <th>Total</th>
+                        </tr-->
+                    </table>
+                </td>
+                <td>
+                    <table id="tbE2" class="puntos">
+                        <!-- tr>
+                            <th>Ganancias</th>
+                            <th>Total</th>
+                        </tr -->
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
